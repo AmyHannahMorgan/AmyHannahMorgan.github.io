@@ -1,6 +1,18 @@
 /* tags */
+body {
+  margin: 0;
+}
+
 header {
-  
+  display: flex;
+  width: 100vw;
+  height: 7.5vh;
+
+  background-color: #444444;
+}
+
+header > h1 {
+
 }
 /* classes */
 
@@ -9,3 +21,4 @@ header {
 /* media queries */
 
 /* imports */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');
