@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <sandwichButton>
+      <sandwichButton onclick="toggleOpen()">
         <div></div>
         <div></div>
         <div></div>
@@ -15,14 +15,25 @@
       <h1>Amy Hannah Morgan</h1>
 
       <nav class="sandwich">
-        <div class="close">
+        <div class="close" onclick="toggleOpen()">
+          <h1>Close</h1>
+        </div>
+        <div class="clickdown">
+          <h1>About Me</h1>
+          <div class="clickdownArrow">
 
+          </div>
+          <div class="clickdownMenu">
+
+          </div>
         </div>
       </nav>
 
       <nav class="dropdown">
 
       </nav>
+      <script src="js/sandwich-nav.js" charset="utf-8"></script>
     </header>
+    <img src="{{site.url}}/images/cute-kitten.jpg" alt="">
   </body>
 </html>
