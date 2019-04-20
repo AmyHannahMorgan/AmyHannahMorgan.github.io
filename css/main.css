@@ -50,6 +50,7 @@ nav.sandwich {
   background-color: #444444;
 
   width: 100vw;
+  max-width: 500px;
   height: 100vh;
 
   overflow-y: scroll;
