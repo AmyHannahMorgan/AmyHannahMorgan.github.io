@@ -119,6 +119,12 @@ nav.dropdown {
   margin-right: 10%;
 
   transform: rotate(-45deg);
+
+  transition: transform 0.25s ease;
+}
+
+.clickdownArrowDown {
+  transform: rotate(45deg) !important;
 }
 
 .clickdownMenu {
