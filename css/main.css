@@ -9,16 +9,45 @@ header {
   height: 7.5vh;
 
   background-color: #444444;
+  align-items: center;
 }
 
 header > h1 {
+  font-family: 'Oxygen Mono', monospace;
+  color: #f30067;
+  font-size: 8vw;
+  text-align: center;
 
+  width: 100%;
+  margin: 0;
+}
+
+header > sandwichButton {
+  width: 7.5vh;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  float: left;
+}
+
+sandwichButton > div {
+  background-color: #eaeaea;
+  width: 90%;
+  height: 15%;
 }
 /* classes */
 
 /* ids */
 
 /* media queries */
+@media only screen and (min-width: 425px) {
+  header > h1 {
+    font-size: 34px;
+  }
+}
 
 /* imports */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');
