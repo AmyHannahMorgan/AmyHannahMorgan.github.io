@@ -123,6 +123,12 @@ nav.dropdown {
 
 .clickdownMenu {
   margin-left: 2.5%;
+  height: auto;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+
+  transition: all 0.25s ease;
 }
 
 .clickdownMenu > ul {
@@ -139,6 +145,10 @@ nav.dropdown {
   font-size: 1.5em;
   height: 2em;
   border-bottom: thin solid #eaeaea;
+}
+
+.clickdownMenuOpen {
+  transform: scaleY(1);
 }
 /* ids */
 
