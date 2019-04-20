@@ -44,7 +44,7 @@ sandwichButton > div {
 
 nav.sandwich {
   position: absolute;
-  left: 0;
+  left: -100vw;
   top: 0;
 
   background-color: #444444;
@@ -53,6 +53,8 @@ nav.sandwich {
   height: 100vh;
 
   overflow-y: scroll;
+
+  transition: left 0.25s ease;
 }
 
 nav.sandwich > .close {
@@ -79,6 +81,10 @@ nav.dropdown {
   color: white;
 
   margin-left: 2.5%;
+}
+
+.sandwichOpen {
+  left: 0vw !important;
 }
 /* ids */
 
