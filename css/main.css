@@ -320,7 +320,19 @@ nav.dropdown {
   right: 0;
 }
 /* ids */
+#profileImage {
+  display: block;
 
+  width: 50vw;
+  height: 50vw;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+
+  border: thick solid #f30067;
+  border-radius: 50%;
+}
 /* media queries */
 @media only screen and (min-width: 426px) and (orientation: portrait) {
   header > h1 {
@@ -337,6 +349,11 @@ nav.dropdown {
 
   body > h2 {
     font-size: 2em;
+  }
+
+  #profileImage {
+    width: 25vw;
+    height: 25vw;
   }
 }
 
@@ -366,6 +383,15 @@ nav.dropdown {
     width: 75vw;
     margin: auto;
     margin-top: 1vh;
+  }
+
+  #profileImage {
+    width: 25vw;
+    height: 25vw;
+
+    float: right;
+
+    margin: auto 1vw auto 0;
   }
 }
 
