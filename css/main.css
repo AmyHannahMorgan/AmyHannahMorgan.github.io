@@ -391,7 +391,7 @@ nav.dropdown {
 
     float: right;
 
-    margin: auto 1vw auto 0;
+    margin-right: 1vw;
   }
 }
 
