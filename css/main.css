@@ -11,6 +11,15 @@ body {
   margin: 0;
 }
 
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vw;
+
+  white-space: pre-line;
+
+  max-width: 100vw;
+}
+
 header {
   display: flex;
   width: 100vw;
@@ -51,7 +60,7 @@ sandwichButton > div {
 }
 
 nav.sandwich {
-  position: absolute;
+  position: fixed;
   left: -100vw;
   top: 0;
 
@@ -256,15 +265,26 @@ nav.dropdown {
   header > h1 {
     font-size: 20px;
   }
+
+  p {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (orientation: landscape) {
   header > h1 {
     font-size: 2em;
   }
+
+  p {
+    font-size: 1.5em;
+
+    width: 75vw;
+    margin: auto;
+  }
 }
 
-@media only screen and (hover: hover) and (min-width: 770px) {
+@media only screen and (hover: hover) and (min-width: 769px) {
   header > sandwichButton {
     display: none;
   }
