@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <sandwichButton onclick="toggleOpen()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </sandwichButton>
+      <h1>Amy Hannah Morgan</h1>
+
+      <nav class="sandwich">
+        <div class="close" onclick="toggleOpen()">
+          <h1>Close</h1>
+        </div>
+        <div class="clickdown">
+          <div class="clickdownButton" onclick="toggleClickdown(this)">
+            <h1>About Me</h1>
+            <div class="clickdownArrow">
+
+            </div>
+          </div>
+          <div class="clickdownMenu">
+            <ul>
+              <li>test</li>
+              <li>test 2</li>
+              <li>test 3</li>
+              <li>test 4</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <script src="js/sandwich-nav.js" charset="utf-8"></script>
+    </header>
+    <nav class="dropdown">
+      <div class="dropdownContainer">
+        <div class="dropdownTitle">
+          <a href="/">About Me</a>
+        </div>
+        <div class="dropdownContent">
+          <ul>
+            <li>Introduction</li>
+            <li>Hobbies and Interests</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdownContainer">
+        <div class="dropdownTitle">
+          <a href="/qualifications/">Qualifications</a>
+        </div>
+        <div class="dropdownContent">
+          <ul>
+            <li>Qualifications</li>
+            <li>Achievements</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdownContainer">
+        <div class="dropdownTitle">
+          <a href="/cvs/">CVs</a>
+        </div>
+        <div class="dropdownContent">
+          <ul>
+            <li>Technical CV</li>
+            <li>Non-technical CV</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {{ content }}
+
+  </body>
+</html>
