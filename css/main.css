@@ -1,6 +1,45 @@
+/* imports */
+/* @import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Press+Start+2P|Ubuntu+Mono');
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Ubuntu Mono', monospace;
+*/
 /* tags */
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+body > h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 8vw;
+  color: #f30067;
+
+  margin: 1vh 2vw 0;
+
+  border-bottom: thick solid #f30067;
+}
+
+body > h2 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 7vw;
+  color: #f30067;
+
+  margin: 1vh 2vw 0;
+}
+
+body > p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vw;
+
+  margin: 0 2vw 0;
+  padding-bottom: 2vh;
+
+  white-space: pre-line;
+
+  max-width: 100vw;
 }
 
 header {
@@ -14,9 +53,9 @@ header {
 }
 
 header > h1 {
-  font-family: 'Oxygen Mono', monospace;
+  font-family: 'Press Start 2P', cursive;
   color: #f30067;
-  font-size: 8vw;
+  font-size: 4vw;
   text-align: center;
 
   width: 100%;
@@ -43,13 +82,14 @@ sandwichButton > div {
 }
 
 nav.sandwich {
-  position: absolute;
+  position: fixed;
   left: -100vw;
   top: 0;
 
   background-color: #444444;
 
   width: 100vw;
+  max-width: 500px;
   height: 100vh;
 
   overflow-y: scroll;
@@ -73,11 +113,20 @@ nav.sandwich > .close {
 
 nav.dropdown {
   display: none;
+  table-layout: fixed;
+
+  width: 100vw;
+  height: 5vh;
+
+  position: sticky;
+  top: 0;
+
+  background-color: #444;
 }
 
 /* classes */
 .close > h1 {
-  font-family: 'Oxygen Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   color: white;
 
   margin-left: 2.5%;
@@ -86,12 +135,225 @@ nav.dropdown {
 .sandwichOpen {
   left: 0vw !important;
 }
-/* ids */
 
+.clickdown {
+
+}
+
+.clickdownButton {
+  display: flex;
+  align-items: center;
+  height: 7.5vh;
+  min-height: 60px;
+
+  border-bottom: medium solid #eaeaea;
+}
+
+.clickdownButton > h1 {
+  font-family: 'Ubuntu Mono', monospace;
+
+  margin-left: 2.5%;
+
+  width: 100%;
+}
+
+.clickdownButton > h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+.clickdownButton > .clickdownArrow {
+  float: left;
+
+  border: solid #eaeaea;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+
+  margin-right: 10%;
+
+  transform: rotate(-45deg);
+
+  transition: transform 0.25s ease;
+}
+
+.clickdownArrowDown {
+  transform: rotate(45deg) !important;
+}
+
+.clickdownMenu {
+  margin-left: 2.5%;
+  height: auto;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+
+  transition: all 0.25s ease;
+}
+
+.clickdownMenu > ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.clickdownMenu > ul > li {
+  border-bottom: thin solid #eaeaea;
+}
+
+.clickdownMenu > ul > li > a {
+  display: flex;
+  align-items: center;
+
+  font-family: 'Oswald', sans-serif;
+  color: #eaeaea;
+  font-size: 1.5em;
+  height: 2em;
+  text-decoration: none;
+}
+
+.clickdownMenuOpen {
+  transform: scaleY(1);
+}
+
+.dropdownContainer {
+  display: table-cell;
+  position: relative;
+  height: 100%;
+}
+
+.dropdownTitle {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownTitle > a {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.2em;
+  color: #eaeaea;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdownContent {
+  background-color: #eaeaea;
+  border-style: none solid solid;
+  border-width: thick;
+  border-color: #444;
+  margin: 0;
+
+  overflow: hidden;
+
+  position: absolute;
+  top: 100%;
+
+  width: 100%;
+
+  transition: transform 0.25s ease;
+
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.dropdownContainer:hover > .dropdownContent{
+  transform: scaleY(1);
+}
+
+.dropdownContent > ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdownContent > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-left: 1vw;
+  padding-right: 1vw;
+
+  width: 100%;
+
+  font-family: 'Oswald', sans-serif;
+  color: #444;
+  font-size: 1em;
+  border-bottom: thin solid #444;
+}
+
+.pageBorders {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+
+  width: 15vw;
+  height: 100%;
+
+  background-image: url('/assets/background images/4x/Cubes@4x.png');
+  background-repeat: repeat-x repeat-y;
+}
+
+.border.borderLeft {
+  left: 0;
+}
+
+.border.borderRight {
+  right: 0;
+}
+/* ids */
+#profileImage {
+  display: block;
+
+  width: 50vw;
+  height: 50vw;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+
+  border: thick solid #f30067;
+  border-radius: 50%;
+}
 /* media queries */
-@media only screen and (min-width: 425px) and (orientation: portrait) {
+@media only screen and (min-width: 426px) and (orientation: portrait) {
   header > h1 {
-    font-size: 34px;
+    font-size: 20px;
+  }
+
+  body > p {
+    font-size: 1.5em;
+  }
+
+  body > h1 {
+    font-size: 2.25em;
+  }
+
+  body > h2 {
+    font-size: 2em;
+  }
+
+  #profileImage {
+    width: 25vw;
+    height: 25vw;
   }
 }
 
@@ -99,13 +361,73 @@ nav.dropdown {
   header > h1 {
     font-size: 2em;
   }
-}
 
-@media (hover: hover) {
-  header > sandwichButton {
-    display: none;
+  body > p {
+    font-size: 1.5em;
+
+    width: 75vw;
+    margin: auto;
+  }
+
+  body > h1 {
+    font-size: 2.25em;
+
+    width: 75vw;
+    margin: auto;
+    margin-top: 1vh;
+  }
+
+  body > h2 {
+    font-size: 2em;
+
+    width: 75vw;
+    margin: auto;
+    margin-top: 1vh;
+  }
+
+  #profileImage {
+    width: 25vw;
+    height: 25vw;
+
+    float: right;
+
+    margin-right: 1vw;
   }
 }
 
-/* imports */
-@import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');
+@media only screen and (hover: hover) and (min-width: 769px) {
+  header > sandwichButton {
+    display: none;
+  }
+
+  nav.dropdown {
+    display: table;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body > p {
+    width: 50vw;
+    margin: auto;
+  }
+
+  body > h1 {
+    font-size: 2.25em;
+
+    width: 50vw;
+    margin: auto;
+    margin-top: 1vh
+  }
+
+  body > h1 {
+    font-size: 2em;
+
+    width: 50vw;
+    margin: auto;
+    margin-top: 1vh
+  }
+
+  .pageBorders {
+    display: block;
+  }
+}
