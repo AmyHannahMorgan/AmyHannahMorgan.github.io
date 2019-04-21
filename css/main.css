@@ -1,3 +1,11 @@
+/* imports */
+/* @import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono|Press+Start+2P');
+/*
+font-family: 'Oxygen Mono', monospace;
+font-family: 'Oswald', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
 /* tags */
 body {
   margin: 0;
@@ -14,9 +22,9 @@ header {
 }
 
 header > h1 {
-  font-family: 'Oxygen Mono', monospace;
+  font-family: 'Press Start 2P', cursive;
   color: #f30067;
-  font-size: 8vw;
+  font-size: 4vw;
   text-align: center;
 
   width: 100%;
@@ -183,9 +191,11 @@ nav.dropdown {
 }
 
 .dropdownTitle > a {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 1.2em;
   color: #eaeaea;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .dropdownContent {
@@ -202,7 +212,10 @@ nav.dropdown {
 
   width: 100%;
 
+  transition: transform 0.25s ease;
+
   transform: scaleY(0);
+  transform-origin: top;
 }
 
 .dropdownContainer:hover > .dropdownContent{
@@ -233,7 +246,7 @@ nav.dropdown {
 
   font-family: 'Oswald', sans-serif;
   color: #444;
-  font-size: 1.2em;
+  font-size: 1em;
   border-bottom: thin solid #444;
 }
 /* ids */
@@ -241,7 +254,7 @@ nav.dropdown {
 /* media queries */
 @media only screen and (min-width: 425px) and (orientation: portrait) {
   header > h1 {
-    font-size: 34px;
+    font-size: 20px;
   }
 }
 
@@ -260,6 +273,3 @@ nav.dropdown {
     display: table;
   }
 }
-
-/* imports */
-@import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen+Mono');
