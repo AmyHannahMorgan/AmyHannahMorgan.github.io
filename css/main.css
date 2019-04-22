@@ -53,6 +53,9 @@ header {
   height: 7.5vh;
   min-height: 60px;
 
+  position: sticky;
+  top: 0;
+
   background-color: #444444;
   align-items: center;
 }
@@ -455,6 +458,10 @@ footer.mobileFooter > .socialMediaLinks > a {
 }
 
 @media only screen and (hover: hover) and (min-width: 769px) {
+  header {
+    position: static;
+  }
+  
   header > sandwichButton {
     display: none;
   }
