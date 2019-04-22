@@ -129,6 +129,53 @@ nav.dropdown {
   background-color: #444;
 }
 
+footer.mobileFooter {
+  width: 100vw;
+  height: 17.5vh;
+
+  background-color: #444;
+}
+
+footer.mobileFooter > h2 {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #f30067;
+  text-align: center;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+footer.mobileFooter > p {
+  font-family: 'Oswald', sans-serif;
+  color: #f30067;
+  text-align: center;
+
+  width: 100%;
+
+  margin: 1vh 0 0;
+}
+
+footer.mobileFooter > p > a {
+  text-decoration: none;
+  color: #f30067;
+
+  margin: 0;
+}
+
+footer.mobileFooter > .socialMediaLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+footer.mobileFooter > .socialMediaLinks > a {
+  padding: 0 1vw;
+}
+
 /* classes */
 .close > h1 {
   font-family: 'Ubuntu Mono', monospace;
