@@ -103,6 +103,8 @@ nav.sandwich {
   overflow-y: scroll;
 
   transition: left 0.25s ease;
+
+  text-align: left;
 }
 
 nav.sandwich > .close {
