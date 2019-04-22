@@ -419,7 +419,7 @@ nav.dropdown {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) and (orientation: landscape){
   body > p {
     width: 50vw;
     margin: auto;
