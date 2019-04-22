@@ -131,13 +131,14 @@ nav.dropdown {
 
 footer.mobileFooter {
   width: 100vw;
-  height: 17.5vh;
+  height: 20vh;
 
   background-color: #444;
 }
 
 footer.mobileFooter > h2 {
   font-family: 'Ubuntu Mono', monospace;
+  font-weight: 500;
   color: #f30067;
   text-align: center;
 
@@ -153,6 +154,10 @@ footer.mobileFooter > p {
 
   width: 100%;
 
+  margin: 0;
+}
+
+footer.mobileFooter > p:first-of-type {
   margin: 1vh 0 0;
 }
 
