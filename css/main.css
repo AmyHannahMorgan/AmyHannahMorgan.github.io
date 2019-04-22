@@ -131,7 +131,7 @@ nav.dropdown {
 
 footer.mobileFooter {
   width: 100vw;
-  height: 20vh;
+  height: auto;
 
   background-color: #444;
 }
