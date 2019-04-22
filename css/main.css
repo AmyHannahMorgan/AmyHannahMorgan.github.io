@@ -7,6 +7,11 @@ font-family: 'Press Start 2P', cursive;
 font-family: 'Ubuntu Mono', monospace;
 */
 /* tags */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -122,6 +127,58 @@ nav.dropdown {
   top: 0;
 
   background-color: #444;
+}
+
+footer.mobileFooter {
+  width: 100vw;
+  height: 20vh;
+
+  background-color: #444;
+}
+
+footer.mobileFooter > h2 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: 500;
+  color: #f30067;
+  text-align: center;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+footer.mobileFooter > p {
+  font-family: 'Oswald', sans-serif;
+  color: #f30067;
+  text-align: center;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+footer.mobileFooter > p:first-of-type {
+  margin: 1vh 0 0;
+}
+
+footer.mobileFooter > p > a {
+  text-decoration: none;
+  color: #f30067;
+
+  margin: 0;
+}
+
+footer.mobileFooter > .socialMediaLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+footer.mobileFooter > .socialMediaLinks > a {
+  padding: 0 1vw;
 }
 
 /* classes */
@@ -291,9 +348,11 @@ nav.dropdown {
 
 .pageBorders {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 
   width: 100vw;
   height: 100%;
@@ -405,7 +464,14 @@ nav.dropdown {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1070px) {
+  #profileImage {
+    width: 268px;
+    height: 268px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (orientation: landscape) {
   body > p {
     width: 50vw;
     margin: auto;
@@ -419,7 +485,7 @@ nav.dropdown {
     margin-top: 1vh
   }
 
-  body > h1 {
+  body > h2 {
     font-size: 2em;
 
     width: 50vw;
@@ -430,4 +496,6 @@ nav.dropdown {
   .pageBorders {
     display: block;
   }
+
+
 }
