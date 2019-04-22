@@ -242,12 +242,9 @@ footer.mobileFooter > .socialMediaLinks > a {
 
 .clickdownMenu {
   margin-left: 2.5%;
-  height: auto;
+  height: 0px;
   overflow: hidden;
-  transform: scaleY(0);
   transform-origin: top;
-
-  transition: all 0.25s ease;
 }
 
 .clickdownMenu > ul {
@@ -270,8 +267,8 @@ footer.mobileFooter > .socialMediaLinks > a {
   text-decoration: none;
 }
 
-.clickdownMenuOpen {
-  transform: scaleY(1);
+.clickdownMenuTransition {
+  transition: height 0.25s ease;
 }
 
 .dropdownContainer {
@@ -461,7 +458,7 @@ footer.mobileFooter > .socialMediaLinks > a {
   header {
     position: static;
   }
-  
+
   header > sandwichButton {
     display: none;
   }
