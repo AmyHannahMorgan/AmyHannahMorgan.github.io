@@ -7,6 +7,11 @@ font-family: 'Press Start 2P', cursive;
 font-family: 'Ubuntu Mono', monospace;
 */
 /* tags */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -291,9 +296,11 @@ nav.dropdown {
 
 .pageBorders {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 
   width: 100vw;
   height: 100%;
@@ -405,6 +412,13 @@ nav.dropdown {
   }
 }
 
+@media only screen and (min-width: 1070px) {
+  #profileImage {
+    width: 268px;
+    height: 268px;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   body > p {
     width: 50vw;
@@ -419,7 +433,7 @@ nav.dropdown {
     margin-top: 1vh
   }
 
-  body > h1 {
+  body > h2 {
     font-size: 2em;
 
     width: 50vw;
@@ -430,4 +444,6 @@ nav.dropdown {
   .pageBorders {
     display: block;
   }
+
+
 }
