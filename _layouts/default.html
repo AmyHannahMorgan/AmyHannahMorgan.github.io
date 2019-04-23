@@ -25,10 +25,43 @@
 
             </div>
           </div>
-          <div class="clickdownMenu">
+          <div class="clickdownMenu clickdownMenuTransition" collapsed='true'>
             <ul>
               <li><a href="/#introduction">Introduction</a></li>
               <li><a href="/#hobbies">Hobbies and Interests</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clickdown">
+          <div class="clickdownButton" onclick="toggleClickdown(this)">
+            <h1><a href="/qualifications">Qualifications</a></h1>
+            <div class="clickdownArrow">
+
+            </div>
+          </div>
+          <div class="clickdownMenu clickdownMenuTransition" collapsed='true'>
+            <ul>
+              <li><a href="/qualifications/#qualifications">Qualifications</a></li>
+              <li><a href="/qualifications/#achievements">Achievements</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clickdown">
+          <div class="clickdownButton">
+            <h1><a href="/projects">Projects</a></h1>
+          </div>
+        </div>
+        <div class="clickdown">
+          <div class="clickdownButton" onclick="toggleClickdown(this)">
+            <h1><a href="/cvs">CVs</a></h1>
+            <div class="clickdownArrow">
+
+            </div>
+          </div>
+          <div class="clickdownMenu clickdownMenuTransition" collapsed='true'>
+            <ul>
+              <li><a href="/cvs/#TCV">Technical CV</a></li>
+              <li><a href="/cvs/#NTCV">Non-technical CV</a></li>
             </ul>
           </div>
         </div>
@@ -55,8 +88,12 @@
           <ul>
             <li>Qualifications</li>
             <li>Achievements</li>
-            <li>Projects</li>
           </ul>
+        </div>
+      </div>
+      <div class="dropdownContainer">
+        <div class="dropdownTitle">
+          <a href="/projects/">Projects</a>
         </div>
       </div>
       <div class="dropdownContainer">
@@ -92,9 +129,6 @@
       <p>&copy; <span id="copyrightYear"></span>, Amy Hannah Morgan</p>
       <p><a href="http://www.freepik.com/">Vectors&nbsp;graphics designed by Freepik</a></p>
       <p><a href="https://nucleoapp.com/">Social media icons by Sebastiano Guerriero</a></p>
-    </footer>
-    <footer class="desktopFooter">
-
     </footer>
     <script src="/js/copyright-year.js" charset="utf-8"></script>
   </body>
