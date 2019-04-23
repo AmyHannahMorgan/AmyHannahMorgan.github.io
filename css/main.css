@@ -7,14 +7,12 @@ font-family: 'Press Start 2P', cursive;
 font-family: 'Ubuntu Mono', monospace;
 */
 /* tags */
-html {
-  min-height: 100%;
-  position: relative;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 body > h1 {
@@ -161,7 +159,7 @@ nav.dropdown {
 footer.mobileFooter {
   width: 100vw;
   height: auto;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
 
   background-color: #444;
 }
