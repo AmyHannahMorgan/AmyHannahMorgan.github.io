@@ -373,6 +373,11 @@ footer.mobileFooter > .socialMediaLinks > a {
   border-bottom: thin solid #444;
 }
 
+.dropdownContent > ul > li > a {
+  text-decoration: none;
+  color: #444;
+}
+
 .pageBorders {
   display: none;
   position:absolute;
