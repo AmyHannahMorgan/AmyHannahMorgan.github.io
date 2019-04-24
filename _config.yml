@@ -22,6 +22,9 @@ url: "https://amyhannahmorgan.github.io/" # the base hostname & protocol for you
 twitter_username: jekyllrb
 github_username:  AmyHannahMorgan
 
+collections:
+  projects:
+    output: true
 # Build settings
 markdown: kramdown
 # Exclude from processing.
