@@ -1,0 +1,104 @@
+/* tags */
+
+/* classes */
+.projectLanguages {
+  grid-area: Languages;
+}
+
+.projectLinks {
+  grid-area: Links;
+}
+
+.projectHeaderGrid {
+  display: grid;
+  width: 100%;
+  height: auto;
+
+  margin: auto;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas: 'Languages Languages Languages Languages' 'Links Links Links Links';
+}
+
+.projectHeaderGrid h2 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 7vw;
+  color: #f30067;
+
+  margin: 1vh 2vw 0;
+}
+
+.projectHeaderGrid p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vw;
+
+  margin: 0 2vw 0;
+  padding-bottom: 2vh;
+
+  white-space: pre-line;
+
+  max-width: 100vw;
+}
+
+.projectHeaderGrid ul {
+  list-style-type: none;
+}
+
+.projectHeaderGrid ul li::before {
+  content: '\2022';
+  color: #f30067;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+
+  padding: 0;
+}
+
+.projectHeaderGrid ul li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vw;
+
+  max-width: 100vw;
+
+  margin: 0;
+  padding: 0;
+}
+/* IDs */
+
+/* media queries */
+@media only screen and (min-width: 426px) and (orientation: portrait) {
+  .projectHeaderGrid h2 {
+    font-size: 2em;
+  }
+
+  .projectHeaderGrid ul li {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .projectHeaderGrid {
+    width: 75vw;
+  }
+
+  .projectHeaderGrid h2 {
+    font-size: 2em;
+
+    width: 75vw;
+    margin: auto;
+    margin-top: 1vh;
+  }
+
+  .projectHeaderGrid ul li {
+    font-size: 1.5em;
+
+    width: 75vw;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (orientation: landscape) {
+  .projectHeaderGrid {
+    width: 50vw;
+    grid-template-areas: 'Languages Languages Links Links';
+  }
+}
