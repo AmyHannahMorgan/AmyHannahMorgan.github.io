@@ -5,7 +5,8 @@ messages = [
   'At least I\'m not a teapot.',
   'Ravioli, ravioli, that page doesn\'t exist-ioli.',
   'This page is trying its best.',
-  'Roses are red. Violets are blue. I wish I could\'ve found that page for you.'
+  'Roses are red. Violets are blue. I wish I could\'ve found that page for you.',
+  '¯\\_(ツ)_/¯'
 ]
 
 messageElem.innerHTML = messages[RNGesus(0, messages.length - 1)];
